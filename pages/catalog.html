@@ -20,11 +20,7 @@
     />
 
     <!-- Подключение стилей -->
-    <style>
-      body {
-        background: rgb(68, 64, 64);
-      }
-    </style>
+
     <link rel="stylesheet" href="../css/reset.css" />
     <link rel="stylesheet" href="../css/style.css" />
     <link rel="stylesheet" href="../css/media.css" />
@@ -260,7 +256,9 @@
               <span><a href="./catalog.html">Каталог</a></span>
             </div>
           </div>
+
           <!-- Меню аккордеон -->
+
           <div class="main_page_row">
             <aside class="aside_mian">
               <div class="aside_main_row">
@@ -311,29 +309,17 @@
                   <li>
                     <a class="menu_catalog_link accordions" href="#"> Размер</a>
                     <ul class="menu_catalog_card_sub contents">
-                      <li>
-                        <a
-                          class="menu_catalog_link_sub"
-                          style="color: black"
-                          href="#"
-                          >S</a
-                        >
+                      <li class="button button_type_all" data-filter="all">
+                        Все
                       </li>
-                      <li>
-                        <a
-                          class="menu_catalog_link_sub"
-                          style="color: black"
-                          href="#"
-                          >M</a
-                        >
+                      <li class="button button_type_cat" data-filter="cat">
+                        M
                       </li>
-                      <li>
-                        <a
-                          class="menu_catalog_link_sub"
-                          style="color: black"
-                          href="#"
-                          >L</a
-                        >
+                      <li class="button button_type_dog" data-filter="dog">
+                        S
+                      </li>
+                      <li class="button button_type_bird" data-filter="bird">
+                        L
                       </li>
                     </ul>
                   </li>
@@ -371,7 +357,7 @@
                       <div class="dropdown">
                         <button
                           data-path="one"
-                          class="btn btn-secondary dropdown-toggle"
+                          class="btn_size btn btn-secondary dropdown-toggle"
                         >
                           Размер
                         </button>
@@ -380,12 +366,20 @@
                           class="dropdown-menu"
                           aria-labelledby="dropdownMenuButton"
                         >
-                          <li><a class="dropdown-item" href="#">S</a></li>
-                          <li>
-                            <a class="dropdown-item" href="#">L</a>
+                          <li class="button button_type_all" data-filter="all">
+                            Все
                           </li>
-                          <li>
-                            <a class="dropdown-item" href="#">M</a>
+                          <li class="button button_type_cat" data-filter="cat">
+                            M
+                          </li>
+                          <li class="button button_type_dog" data-filter="dog">
+                            S
+                          </li>
+                          <li
+                            class="button button_type_bird"
+                            data-filter="bird"
+                          >
+                            L
                           </li>
                         </ul>
                       </div>
@@ -393,7 +387,7 @@
                       <div class="dropdown">
                         <button
                           data-path="two"
-                          class="btn btn-secondary dropdown-toggle"
+                          class="btn_size_two btn btn-secondary dropdown-toggle"
                         >
                           Цвет
                         </button>
@@ -402,12 +396,42 @@
                           class="dropdown-menu dropdown_menu_row"
                           aria-labelledby="dropdownMenuButton"
                         >
-                          <li><a class="dropdown-item white" href="#"></a></li>
                           <li>
-                            <a class="dropdown-item aqua" href="#"></a>
+                            <a
+                              class="dropdown-item white"
+                              style="
+                                background: linear-gradient(
+                                  267deg,
+                                  #00bcd4,
+                                  #ff9800
+                                );
+                              "
+                              data-f="all"
+                              href="#"
+                            ></a>
+                          </li>
+                          <li></li>
+
+                          <li>
+                            <a
+                              class="dropdown-item white"
+                              data-f="alizarin"
+                              href="#"
+                            ></a>
                           </li>
                           <li>
-                            <a class="dropdown-item orange" href="#"></a>
+                            <a
+                              class="dropdown-item aqua"
+                              data-f="wisteria"
+                              href="#"
+                            ></a>
+                          </li>
+                          <li>
+                            <a
+                              class="dropdown-item orange"
+                              data-f="emerland"
+                              href="#"
+                            ></a>
                           </li>
                         </ul>
                       </div>
@@ -415,7 +439,7 @@
                       <div class="dropdown">
                         <button
                           data-path="three"
-                          class="btn btn-secondary dropdown-toggle"
+                          class="btn_size_two btn btn-secondary dropdown-toggle"
                         >
                           Цена
                         </button>
@@ -431,7 +455,7 @@
                       <div class="dropdown">
                         <button
                           data-path="four"
-                          class="btn btn-secondary dropdown-toggle"
+                          class="btn_size_three btn btn-secondary dropdown-toggle"
                         >
                           Сортировать по
                         </button>
@@ -454,208 +478,261 @@
                   </div>
                 </div>
                 <div class="menu_catalog_card_row">
-                  <div class="menu_catalog_body">
+                  <div class="menu_catalog_body card cat">
                     <a href="#">
-                      <img src="../img/catalog/1.png" alt="image" />
+                      <img
+                        class="card cat"
+                        src="../img/catalog/1.png"
+                        alt="image"
+                      />
+                      <div class="menu_catalog_title">
+                        Белая куртка
+                        <span class="menu_catalog_new">new</span>
+                      </div>
+                      <span class="menu_catalog_price">8888 грн</span>
+                      <div class="menu_catalog_size">M</div>
+                      <ul class="color_row nav">
+                        <li class="col-auto box alizarin color_white"></li>
+                        <li class="col-auto box wisteria color_blue"></li>
+                        <li class="col-auto box emerland color_ornage"></li>
+                      </ul>
                     </a>
-                    <div class="menu_catalog_title">
-                      Белая куртка
-                      <span class="menu_catalog_new">new</span>
-                    </div>
-                    <span class="menu_catalog_price">2900 грн</span>
-                    <div class="menu_catalog_size">XXS XS S M L</div>
-                    <div class="color_row">
-                      <span class="color_white"></span>
-                      <span class="color_blue"></span>
-                      <span class="color_ornage"></span>
-                    </div>
                   </div>
 
-                  <div class="menu_catalog_body">
+                  <div class="menu_catalog_body card dog">
                     <a href="#">
-                      <img src="../img/catalog/2.png" alt="image" />
+                      <img
+                        class="card dog"
+                        src="../img/catalog/2.png"
+                        alt="image"
+                      />
+                      <div class="menu_catalog_title">
+                        Синее пальто
+                        <span class="menu_catalog_new">new</span>
+                      </div>
+                      <span class="menu_catalog_price">3215 грн</span>
+                      <div class="menu_catalog_size">S</div>
+                      <ul class="color_row nav">
+                        <li class="color_white col-auto box alizarin"></li>
+                        <li class="color_blue col-auto box wisteria"></li>
+                        <li class="color_ornage col-auto box emerland"></li>
+                      </ul>
                     </a>
-                    <div class="menu_catalog_title">
-                      Белая куртка
-                      <span class="menu_catalog_new">new</span>
-                    </div>
-                    <span class="menu_catalog_price">2900 грн</span>
-                    <div class="menu_catalog_size">XXS XS S M L</div>
-                    <div class="color_row">
-                      <span class="color_white"></span>
-                      <span class="color_blue"></span>
-                      <span class="color_ornage"></span>
-                    </div>
                   </div>
 
-                  <div class="menu_catalog_body">
+                  <div class="menu_catalog_body card dog">
                     <a href="#">
-                      <img src="../img/catalog/3.png" alt="image" />
+                      <img
+                        class="card dog"
+                        src="../img/catalog/3.png"
+                        alt="image"
+                      />
+                      <div class="menu_catalog_title">
+                        Бежевая шуба
+                        <span class="menu_catalog_new">new</span>
+                      </div>
+                      <span class="menu_catalog_price">25417 грн</span>
+                      <div class="menu_catalog_size">S</div>
+                      <ul class="color_row nav">
+                        <li class="color_white col-auto box alizarin"></li>
+                        <li class="color_blue col-auto box wisteria"></li>
+                        <li class="color_ornage col-auto box emerland"></li>
+                      </ul>
                     </a>
-                    <div class="menu_catalog_title">
-                      Белая куртка
-                      <span class="menu_catalog_new">new</span>
-                    </div>
-                    <span class="menu_catalog_price">2900 грн</span>
-                    <div class="menu_catalog_size">XXS XS S M L</div>
-                    <div class="color_row">
-                      <span class="color_white"></span>
-                      <span class="color_blue"></span>
-                      <span class="color_ornage"></span>
-                    </div>
                   </div>
 
-                  <div class="menu_catalog_body">
+                  <div class="menu_catalog_body card cat">
                     <a href="#">
-                      <img src="../img/catalog/4.png" alt="image" />
+                      <img
+                        class="card cat"
+                        src="../img/catalog/4.png"
+                        alt="image"
+                      />
+                      <div class="menu_catalog_title">
+                        Синяя куртка
+                        <span class="menu_catalog_new">new</span>
+                      </div>
+                      <span class="menu_catalog_price">5555 грн</span>
+                      <div class="menu_catalog_size">M</div>
+                      <ul class="color_row nav">
+                        <li class="color_white col-auto box alizarin"></li>
+                        <li class="color_blue col-auto box wisteria"></li>
+                        <li class="color_ornage col-auto box emerland"></li>
+                      </ul>
                     </a>
-                    <div class="menu_catalog_title">
-                      Белая куртка
-                      <span class="menu_catalog_new">new</span>
-                    </div>
-                    <span class="menu_catalog_price">2900 грн</span>
-                    <div class="menu_catalog_size">XXS XS S M L</div>
-                    <div class="color_row">
-                      <span class="color_white"></span>
-                      <span class="color_blue"></span>
-                      <span class="color_ornage"></span>
-                    </div>
                   </div>
 
-                  <div class="menu_catalog_body">
+                  <div class="menu_catalog_body card dog">
                     <a href="#">
-                      <img src="../img/catalog/3.png" alt="image" />
+                      <img
+                        class="card dog"
+                        src="../img/catalog/3.png"
+                        alt="image"
+                      />
+                      <div class="menu_catalog_title">
+                        Бежевая шуба
+                        <span class="menu_catalog_new">new</span>
+                      </div>
+                      <span class="menu_catalog_price">2900 грн</span>
+                      <div class="menu_catalog_size">S</div>
+                      <ul class="color_row nav">
+                        <li class="color_white col-auto box alizarin"></li>
+                        <li class="color_blue col-auto box wisteria"></li>
+                        <li class="color_ornage col-auto box emerland"></li>
+                      </ul>
                     </a>
-                    <div class="menu_catalog_title">
-                      Белая куртка
-                      <span class="menu_catalog_new">new</span>
-                    </div>
-                    <span class="menu_catalog_price">2900 грн</span>
-                    <div class="menu_catalog_size">XXS XS S M L</div>
-                    <div class="color_row">
-                      <span class="color_white"></span>
-                      <span class="color_blue"></span>
-                      <span class="color_ornage"></span>
-                    </div>
                   </div>
 
-                  <div class="menu_catalog_body">
+                  <div class="menu_catalog_body card bird">
                     <a href="#">
-                      <img src="../img/catalog/2.png" alt="image" />
+                      <img
+                        class="card bird"
+                        src="../img/catalog/2.png"
+                        alt="image"
+                      />
+                      <div class="menu_catalog_title">
+                        Синее пальто
+                        <span class="menu_catalog_new">new</span>
+                      </div>
+                      <span class="menu_catalog_price">2900 грн</span>
+                      <div class="menu_catalog_size">L</div>
+                      <div class="color_row nav">
+                        <span class="color_white"></span>
+                        <span class="color_blue"></span>
+                        <span class="color_ornage"></span>
+                      </div>
                     </a>
-                    <div class="menu_catalog_title">
-                      Белая куртка
-                      <span class="menu_catalog_new">new</span>
-                    </div>
-                    <span class="menu_catalog_price">2900 грн</span>
-                    <div class="menu_catalog_size">XXS XS S M L</div>
-                    <div class="color_row">
-                      <span class="color_white"></span>
-                      <span class="color_blue"></span>
-                      <span class="color_ornage"></span>
-                    </div>
                   </div>
 
-                  <div class="menu_catalog_body">
+                  <div class="menu_catalog_body card cat">
                     <a href="#">
-                      <img src="../img/catalog/1.png" alt="image" />
+                      <img
+                        class="card cat"
+                        src="../img/catalog/1.png"
+                        alt="image"
+                      />
+                      <div class="menu_catalog_title card cat">
+                        Белая куртка
+                        <span class="menu_catalog_new">new</span>
+                      </div>
+                      <span class="menu_catalog_price">2900 грн</span>
+                      <div class="menu_catalog_size">M</div>
+                      <div class="color_row nav">
+                        <span class="color_white"></span>
+                        <span class="color_blue"></span>
+                        <span class="color_ornage"></span>
+                      </div>
                     </a>
-                    <div class="menu_catalog_title">
-                      Белая куртка
-                      <span class="menu_catalog_new">new</span>
-                    </div>
-                    <span class="menu_catalog_price">2900 грн</span>
-                    <div class="menu_catalog_size">XXS XS S M L</div>
-                    <div class="color_row">
-                      <span class="color_white"></span>
-                      <span class="color_blue"></span>
-                      <span class="color_ornage"></span>
-                    </div>
                   </div>
 
-                  <div class="menu_catalog_body">
+                  <div class="menu_catalog_body card bird">
                     <a href="#">
-                      <img src="../img/catalog/3.png" alt="image" />
+                      <img
+                        class="card bird"
+                        src="../img/catalog/3.png"
+                        alt="image"
+                      />
+                      <div class="menu_catalog_title">
+                        Бежевая шуба
+
+                        <span class="menu_catalog_new">new</span>
+                      </div>
+                      <span class="menu_catalog_price">2900 грн</span>
+                      <div class="menu_catalog_size">L</div>
+                      <div class="color_row nav">
+                        <span class="color_white"></span>
+                        <span class="color_blue"></span>
+                        <span class="color_ornage"></span>
+                      </div>
                     </a>
-                    <div class="menu_catalog_title">
-                      Белая куртка
-                      <span class="menu_catalog_new">new</span>
-                    </div>
-                    <span class="menu_catalog_price">2900 грн</span>
-                    <div class="menu_catalog_size">XXS XS S M L</div>
-                    <div class="color_row">
-                      <span class="color_white"></span>
-                      <span class="color_blue"></span>
-                      <span class="color_ornage"></span>
-                    </div>
                   </div>
 
-                  <div class="menu_catalog_body">
+                  <div class="menu_catalog_body card bird">
                     <a href="#">
-                      <img src="../img/catalog/4.png" alt="image" />
+                      <img
+                        class="card bird"
+                        src="../img/catalog/4.png"
+                        alt="image"
+                      />
+
+                      <div class="menu_catalog_title">
+                        Синяя куртка
+
+                        <span class="menu_catalog_new">new</span>
+                      </div>
+                      <span class="menu_catalog_price">2900 грн</span>
+                      <div class="menu_catalog_size">L</div>
+                      <div class="color_row nav">
+                        <span class="color_white"></span>
+                        <span class="color_blue"></span>
+                        <span class="color_ornage"></span>
+                      </div>
                     </a>
-                    <div class="menu_catalog_title">
-                      Белая куртка
-                      <span class="menu_catalog_new">new</span>
-                    </div>
-                    <span class="menu_catalog_price">2900 грн</span>
-                    <div class="menu_catalog_size">XXS XS S M L</div>
-                    <div class="color_row">
-                      <span class="color_white"></span>
-                      <span class="color_blue"></span>
-                      <span class="color_ornage"></span>
-                    </div>
                   </div>
 
-                  <div class="menu_catalog_body">
+                  <div class="menu_catalog_body card bird">
                     <a href="#">
-                      <img src="../img/catalog/3.png" alt="image" />
+                      <img
+                        class="card bird"
+                        src="../img/catalog/3.png"
+                        alt="image"
+                      />
+
+                      <div class="menu_catalog_title">
+                        Бежевая шуба
+                        <span class="menu_catalog_new">new</span>
+                      </div>
+                      <span class="menu_catalog_price">2900 грн</span>
+                      <div class="menu_catalog_size">L</div>
+                      <div class="color_row nav">
+                        <span class="color_white"></span>
+                        <span class="color_blue"></span>
+                        <span class="color_ornage"></span>
+                      </div>
                     </a>
-                    <div class="menu_catalog_title">
-                      Белая куртка
-                      <span class="menu_catalog_new">new</span>
-                    </div>
-                    <span class="menu_catalog_price">2900 грн</span>
-                    <div class="menu_catalog_size">XXS XS S M L</div>
-                    <div class="color_row">
-                      <span class="color_white"></span>
-                      <span class="color_blue"></span>
-                      <span class="color_ornage"></span>
-                    </div>
                   </div>
 
-                  <div class="menu_catalog_body">
+                  <div class="menu_catalog_body card bird">
                     <a href="#">
-                      <img src="../img/catalog/2.png" alt="image" />
+                      <img
+                        class="card bird"
+                        src="../img/catalog/2.png"
+                        alt="image"
+                      />
+                      <div class="menu_catalog_title">
+                        Синяя куртка
+
+                        <span class="menu_catalog_new">new</span>
+                      </div>
+                      <span class="menu_catalog_price">2900 грн</span>
+                      <div class="menu_catalog_size">L</div>
+                      <div class="color_row nav">
+                        <span class="color_white"></span>
+                        <span class="color_blue"></span>
+                        <span class="color_ornage"></span>
+                      </div>
                     </a>
-                    <div class="menu_catalog_title">
-                      Белая куртка
-                      <span class="menu_catalog_new">new</span>
-                    </div>
-                    <span class="menu_catalog_price">2900 грн</span>
-                    <div class="menu_catalog_size">XXS XS S M L</div>
-                    <div class="color_row">
-                      <span class="color_white"></span>
-                      <span class="color_blue"></span>
-                      <span class="color_ornage"></span>
-                    </div>
                   </div>
 
-                  <div class="menu_catalog_body">
+                  <div class="menu_catalog_body card cat">
                     <a href="#">
-                      <img src="../img/catalog/1.png" alt="image" />
+                      <img
+                        class="card cat"
+                        src="../img/catalog/1.png"
+                        alt="image"
+                      />
+                      <div class="menu_catalog_title">
+                        Белая куртка
+                        <span class="menu_catalog_new">new</span>
+                      </div>
+                      <span class="menu_catalog_price">2900 грн</span>
+                      <div class="menu_catalog_size">M</div>
+                      <div class="color_row nav">
+                        <span class="color_white"></span>
+                        <span class="color_blue"></span>
+                        <span class="color_ornage"></span>
+                      </div>
                     </a>
-                    <div class="menu_catalog_title">
-                      Белая куртка
-                      <span class="menu_catalog_new">new</span>
-                    </div>
-                    <span class="menu_catalog_price">2900 грн</span>
-                    <div class="menu_catalog_size">XXS XS S M L</div>
-                    <div class="color_row">
-                      <span class="color_white"></span>
-                      <span class="color_blue"></span>
-                      <span class="color_ornage"></span>
-                    </div>
                   </div>
                 </div>
               </div>
@@ -716,8 +793,43 @@
         </div>
       </footer>
     </div>
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.0.0/jquery.min.js"></script>
+    <script>
+      function app() {
+        const buttons = document.querySelectorAll(".button");
+        const cards = document.querySelectorAll(".card");
 
-    <script src="../js/main.js" defer></script>
+        function filter(category, items) {
+          items.forEach((item) => {
+            const isItemFiltered = !item.classList.contains(category);
+            const isShowAll = category.toLowerCase() === "all";
+            if (isItemFiltered && !isShowAll) {
+              item.classList.add("anime");
+            } else {
+              item.classList.remove("hide");
+              item.classList.remove("anime");
+            }
+          });
+        }
+
+        buttons.forEach((button) => {
+          button.addEventListener("click", () => {
+            const currentCategory = button.dataset.filter;
+            filter(currentCategory, cards);
+          });
+        });
+
+        cards.forEach((card) => {
+          card.ontransitionend = function () {
+            if (card.classList.contains("anime")) {
+              card.classList.add("hide");
+            }
+          };
+        });
+      }
+
+      app();
+    </script>
+    <script src="../js/main.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.0.0/jquery.min.js"></script>
   </body>
 </html>
