@@ -421,7 +421,7 @@
   .content,
   .contents {
     max-height: 0;
-    overflow: hidden;
+    overflow: auto;
   }
 
   .size_filter {
